@@ -11,6 +11,7 @@ const connectDB = async () => {
     );
   } catch (error) {
     console.log(`Error in MongoDB ${error}`.bgRed.white);
+    process.exit(1);
   }
 };
 app.all('*', (req,res) => {
