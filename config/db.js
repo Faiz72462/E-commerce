@@ -1,6 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 import Colors from "colors";
+const app = express()
+const PORT = process.env.PORT || 3000
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URL);
