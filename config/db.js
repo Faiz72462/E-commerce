@@ -1,3 +1,4 @@
+import express from "express";
 import mongoose from "mongoose";
 import Colors from "colors";
 const connectDB = async () => {
@@ -10,5 +11,14 @@ const connectDB = async () => {
     console.log(`Error in MongoDB ${error}`.bgRed.white);
   }
 };
+app.all('*', (req,res) => {
+    res.json({"every thing":"is awesome"})
+})
 
+//Connect to the database before listening
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
+})
 export default connectDB;
