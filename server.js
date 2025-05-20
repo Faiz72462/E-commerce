@@ -7,40 +7,42 @@ import authRoute from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
-// import path from "path";
+import path from "path";
+import { fileURLToPath } from 'url';
 
-//configure env
+// configure env
 dotenv.config();
 
-//database config
+// connect to database
 connectDB();
 
-//rest object
+// ES Module fix
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// rest object
 const app = express();
 
-//middelwares
+// middlewares
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
-// app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
-//routes
+// routes
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
-//rest api
-app.get("/", (req, res) => {
-  //send response to client
-  res.send("<h1>WELCOME TO ECOMMERCE</h1>");
-});
-// app.use("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
 
-//port
+// REST API fallback
+app.use("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+// port
 const PORT = process.env.PORT || 8080;
 
-//listen on port
+// start server
 app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`.bgCyan.white);
+  console.log(`Server running on port ${PORT}`.bgCyan.white);
 });
