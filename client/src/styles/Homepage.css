@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&display=swap");
+.banner-img {
+  margin-top: 60px;
+}
+
+.home-page h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #2a55e5;
+  font-family: "Caveat", cursive;
+}
+
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-page .card {
+  /* background-color: red; */
+  background-color: rgba(128, 128, 128, 0.097);
+  width: 18rem;
+}
+.home-page .card-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-page .card-price {
+  color: #fb641b;
+  font-weight: bold;
+}
+.home-page button {
+  border-radius: 0;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.home-page .card-text {
+  color: rgb(90, 89, 89);
+}
+
+.home-page .card img:hover {
+  transform: scale(0.9);
+}
+
+.home-page .card-img-top {
+  height: 300px !important;
+}
+/* ==================
+  filters
+  ============== */
+.filters h4 {
+  font-family: "Caveat", cursive;
+  font-weight: bolder;
+  margin-top: 100px;
+  color: #2a55e5 !important;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.337);
+}
+
+.ant-checkbox-wrapper:first-of-type {
+  margin-left: 8px;
+}
+
+.ant-checkbox-wrapper {
+  margin: 2px;
+}
+.ant-radio-wrapper {
+  margin-bottom: 5px !important;
+  margin-left: 10px;
+}
+
+.filters button {
+  background-color: #2a55e5;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+}
+.filters button:hover {
+  background-color: #ffc200;
+}
+.loadmore {
+  color: #fb641b;
+  font-weight: bold;
+  font-size: 20px !important;
+}

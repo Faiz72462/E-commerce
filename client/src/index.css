@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* //navbar css */
+.navbar {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900 !important;
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+  --webkit-box-shadow: 0 8px 6px -6px gray;
+  border-bottom: solid gray !important;
+}
+/* SearchInput {
+  width: 100%;
+} */
+
+.nav-link {
+  color: #2a55e5;
+  padding-right: 40px !important;
+  font-weight: 300 !important;
+}
+
+.active {
+  border-bottom: 2px solid #ffc200;
+}
+
+.navbar-brand {
+  color: #2a55e5;
+  font-weight: 700;
+  font-family: "Pacifico", cursive !important;
+  letter-spacing: 3px;
+}
+span {
+  color: #ffc200;
+}
+/* =============================
+==========footer============= */
+
+.footer {
+  font-family: "Roboto", sans-serif;
+  color: #ffc200;
+  padding: 25px;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+.footer a {
+  text-decoration: none;
+  color: #2a55e5;
+  padding: 10px;
+}
+
+.footer a:hover {
+  color: #ffc200;
+  border-bottom: 1px solid #ffc200;
+}
+/* =================================
+======== page not found css ======= */
+.pnf {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}
+/* ========================================= */
+/* =========contact us ========= */
+.contactus {
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== */
+.product-link {
+  text-decoration: none !important;
+  color: black !important;
+}
